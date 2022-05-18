@@ -125,8 +125,6 @@ function createCardsCandidatos(listaCandidatos) {
       fechar.forEach(button => {
         button.addEventListener("click", () => {
           candidatoModal.style.display = "none"
-          
-          
           })
       })
       
