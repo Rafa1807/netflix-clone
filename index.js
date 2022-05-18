@@ -108,7 +108,7 @@ function createCardsCandidatos(listaCandidatos) {
     candidatoModal.classList.add("container-modal")
     candidatoModal.innerHTML=`
     <div class="modal" id="iniciamodal">
-        <button href="fechar" title="Fechar" class="fechar">X</button>
+        <button title="Fechar" class="fechar">X</button>
              <img src="${candidato.caminhoImg}">
                  <h1>${candidato.titulo}</h1>
                     <h4>${candidato.descricao}</h4>
@@ -121,16 +121,16 @@ function createCardsCandidatos(listaCandidatos) {
     
     candidatoEl.addEventListener("click", () => {
       candidatoModal.style.display="block";
-      console.log(candidatoEl);
-      const fechar = document.querySelector(".fechar");
-      fechar.addEventListener("click", () => {
-      candidatoModal.style.display = "none"
-      console.log("fechado");
-      
-      
+      const fechar = document.querySelectorAll(".fechar");
+      fechar.forEach(button => {
+        button.addEventListener("click", () => {
+          candidatoModal.style.display = "none"
+          
+          
+          })
       })
+      
     });
   
   });
 }
-
